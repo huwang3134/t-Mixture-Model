@@ -44,6 +44,12 @@ E[Z_{ig}|\boldsymbol {X_i}] =  \frac{\pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_
 ")
 
 ![
+k\_i = \\text{Argmax}\_{\\boldsymbol g} (E\[Z\_{ig}|\\boldsymbol {X\_i}\]) 
+](https://latex.codecogs.com/png.latex?%0Ak_i%20%3D%20%5Ctext%7BArgmax%7D_%7B%5Cboldsymbol%20g%7D%20%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%29%20%0A "
+k_i = \text{Argmax}_{\boldsymbol g} (E[Z_{ig}|\boldsymbol {X_i}]) 
+")
+
+![
 E \\left\[U\_i| \\boldsymbol{X\_i}, \\boldsymbol{Z\_i}  \\right\] = \\frac{v\_{k\_i} + p}{ \\nu\_{k\_i} + (\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})^T \\boldsymbol{\\Sigma\_g}^{-1}(\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})}
 ](https://latex.codecogs.com/png.latex?%0AE%20%5Cleft%5BU_i%7C%20%5Cboldsymbol%7BX_i%7D%2C%20%5Cboldsymbol%7BZ_i%7D%20%20%5Cright%5D%20%3D%20%5Cfrac%7Bv_%7Bk_i%7D%20%2B%20p%7D%7B%20%5Cnu_%7Bk_i%7D%20%2B%20%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%5ET%20%5Cboldsymbol%7B%5CSigma_g%7D%5E%7B-1%7D%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%7D%0A "
 E \left[U_i| \boldsymbol{X_i}, \boldsymbol{Z_i}  \right] = \frac{v_{k_i} + p}{ \nu_{k_i} + (\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})^T \boldsymbol{\Sigma_g}^{-1}(\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})}
