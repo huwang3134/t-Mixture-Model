@@ -44,9 +44,9 @@ E[Z_{ig}|\boldsymbol {X_i}] =  \frac{\pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_
 ")
 
 ![
-k\_i = \\text{Argmax}\_{\\boldsymbol g} (E\[Z\_{ig}|\\boldsymbol {X\_i}\]) 
-](https://latex.codecogs.com/png.latex?%0Ak_i%20%3D%20%5Ctext%7BArgmax%7D_%7B%5Cboldsymbol%20g%7D%20%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%29%20%0A "
-k_i = \text{Argmax}_{\boldsymbol g} (E[Z_{ig}|\boldsymbol {X_i}]) 
+k\_i = \\text{Argmax}\_{g} (E\[Z\_{ig}|\\boldsymbol {X\_i}\]) 
+](https://latex.codecogs.com/png.latex?%0Ak_i%20%3D%20%5Ctext%7BArgmax%7D_%7Bg%7D%20%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%29%20%0A "
+k_i = \text{Argmax}_{g} (E[Z_{ig}|\boldsymbol {X_i}]) 
 ")
 
 ![
