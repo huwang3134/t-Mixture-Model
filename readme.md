@@ -38,27 +38,27 @@ The parameters of the model are ![\\pi\_g, \\boldsymbol{\\mu\_g}, \\boldsymbol{\
 The values computed in the E-step are to compute the parameter estimates in the M-step.
 
 ![
-E\[Z\_{ig}|\\boldsymbol {X\_i}\] =  \\frac{\\pi\_g f\_{\\boldsymbol {T\_g}}(\\boldsymbol {X\_i})}{\\sum\_{g=1}^G \\pi\_g f\_{\\boldsymbol {T\_g}}(\\boldsymbol {X\_i})}
-](https://latex.codecogs.com/png.latex?%0AE%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%3D%20%20%5Cfrac%7B%5Cpi_g%20f_%7B%5Cboldsymbol%20%7BT_g%7D%7D%28%5Cboldsymbol%20%7BX_i%7D%29%7D%7B%5Csum_%7Bg%3D1%7D%5EG%20%5Cpi_g%20f_%7B%5Cboldsymbol%20%7BT_g%7D%7D%28%5Cboldsymbol%20%7BX_i%7D%29%7D%0A "
-E[Z_{ig}|\boldsymbol {X_i}] =  \frac{\pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_i})}{\sum_{g=1}^G \pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_i})}
+E\[Z\_{ig}|\\boldsymbol {X\_i}\] =  \\frac{\\pi\_g f\_{\\boldsymbol {T\_g}}(\\boldsymbol {X\_i})}{\\sum\_{g=1}^G \\pi\_g f\_{\\boldsymbol {T\_g}}(\\boldsymbol {X\_i})}, \\quad \\forall i,g
+](https://latex.codecogs.com/png.latex?%0AE%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%3D%20%20%5Cfrac%7B%5Cpi_g%20f_%7B%5Cboldsymbol%20%7BT_g%7D%7D%28%5Cboldsymbol%20%7BX_i%7D%29%7D%7B%5Csum_%7Bg%3D1%7D%5EG%20%5Cpi_g%20f_%7B%5Cboldsymbol%20%7BT_g%7D%7D%28%5Cboldsymbol%20%7BX_i%7D%29%7D%2C%20%5Cquad%20%5Cforall%20i%2Cg%0A "
+E[Z_{ig}|\boldsymbol {X_i}] =  \frac{\pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_i})}{\sum_{g=1}^G \pi_g f_{\boldsymbol {T_g}}(\boldsymbol {X_i})}, \quad \forall i,g
 ")
 
 ![
-k\_i = \\text{Argmax}\_{g} (E\[Z\_{ig}|\\boldsymbol {X\_i}\]) 
-](https://latex.codecogs.com/png.latex?%0Ak_i%20%3D%20%5Ctext%7BArgmax%7D_%7Bg%7D%20%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%29%20%0A "
-k_i = \text{Argmax}_{g} (E[Z_{ig}|\boldsymbol {X_i}]) 
+k\_i = \\text{Argmax}\_{g} (E\[Z\_{ig}|\\boldsymbol {X\_i}\]), \\quad \\forall i
+](https://latex.codecogs.com/png.latex?%0Ak_i%20%3D%20%5Ctext%7BArgmax%7D_%7Bg%7D%20%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%29%2C%20%5Cquad%20%5Cforall%20i%0A "
+k_i = \text{Argmax}_{g} (E[Z_{ig}|\boldsymbol {X_i}]), \quad \forall i
 ")
 
 ![
-E \\left\[U\_i| \\boldsymbol{X\_i}, \\boldsymbol{Z\_i}  \\right\] = \\frac{v\_{k\_i} + p}{ \\nu\_{k\_i} + (\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})^T \\boldsymbol{\\Sigma\_g}^{-1}(\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})}
-](https://latex.codecogs.com/png.latex?%0AE%20%5Cleft%5BU_i%7C%20%5Cboldsymbol%7BX_i%7D%2C%20%5Cboldsymbol%7BZ_i%7D%20%20%5Cright%5D%20%3D%20%5Cfrac%7Bv_%7Bk_i%7D%20%2B%20p%7D%7B%20%5Cnu_%7Bk_i%7D%20%2B%20%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%5ET%20%5Cboldsymbol%7B%5CSigma_g%7D%5E%7B-1%7D%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%7D%0A "
-E \left[U_i| \boldsymbol{X_i}, \boldsymbol{Z_i}  \right] = \frac{v_{k_i} + p}{ \nu_{k_i} + (\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})^T \boldsymbol{\Sigma_g}^{-1}(\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})}
+E \\left\[U\_i| \\boldsymbol{X\_i}, \\boldsymbol{Z\_i}  \\right\] = \\frac{v\_{k\_i} + p}{ \\nu\_{k\_i} + (\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})^T \\boldsymbol{\\Sigma\_g}^{-1}(\\boldsymbol{X\_i} - \\boldsymbol{\\mu\_{k\_i}})}, \\quad \\forall i
+](https://latex.codecogs.com/png.latex?%0AE%20%5Cleft%5BU_i%7C%20%5Cboldsymbol%7BX_i%7D%2C%20%5Cboldsymbol%7BZ_i%7D%20%20%5Cright%5D%20%3D%20%5Cfrac%7Bv_%7Bk_i%7D%20%2B%20p%7D%7B%20%5Cnu_%7Bk_i%7D%20%2B%20%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%5ET%20%5Cboldsymbol%7B%5CSigma_g%7D%5E%7B-1%7D%28%5Cboldsymbol%7BX_i%7D%20-%20%5Cboldsymbol%7B%5Cmu_%7Bk_i%7D%7D%29%7D%2C%20%5Cquad%20%5Cforall%20i%0A "
+E \left[U_i| \boldsymbol{X_i}, \boldsymbol{Z_i}  \right] = \frac{v_{k_i} + p}{ \nu_{k_i} + (\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})^T \boldsymbol{\Sigma_g}^{-1}(\boldsymbol{X_i} - \boldsymbol{\mu_{k_i}})}, \quad \forall i
 ")
 
 ![
-E \\left \[\\log(U\_i)| \\boldsymbol { X\_i}, \\boldsymbol {Z\_i } \\right\]  = \\psi \\left\[\\frac{1}{2}(\\nu\_{k\_i} + p) \\right\] + \\log \\left\[E \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i}\] \\right\] - \\log\\left(\\frac{1}{2}(v\_{k\_i} + p)\\right)
-](https://latex.codecogs.com/png.latex?%0AE%20%5Cleft%20%5B%5Clog%28U_i%29%7C%20%5Cboldsymbol%20%7B%20X_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%20%7D%20%5Cright%5D%20%20%3D%20%5Cpsi%20%5Cleft%5B%5Cfrac%7B1%7D%7B2%7D%28%5Cnu_%7Bk_i%7D%20%2B%20p%29%20%5Cright%5D%20%2B%20%5Clog%20%5Cleft%5BE%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%5D%20%5Cright%5D%20-%20%5Clog%5Cleft%28%5Cfrac%7B1%7D%7B2%7D%28v_%7Bk_i%7D%20%2B%20p%29%5Cright%29%0A "
-E \left [\log(U_i)| \boldsymbol { X_i}, \boldsymbol {Z_i } \right]  = \psi \left[\frac{1}{2}(\nu_{k_i} + p) \right] + \log \left[E [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i}] \right] - \log\left(\frac{1}{2}(v_{k_i} + p)\right)
+E \\left \[\\log(U\_i)| \\boldsymbol { X\_i}, \\boldsymbol {Z\_i } \\right\]  = \\psi \\left\[\\frac{1}{2}(\\nu\_{k\_i} + p) \\right\] + \\log \\left\[E \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i}\] \\right\] - \\log\\left(\\frac{1}{2}(v\_{k\_i} + p)\\right), \\quad \\forall i
+](https://latex.codecogs.com/png.latex?%0AE%20%5Cleft%20%5B%5Clog%28U_i%29%7C%20%5Cboldsymbol%20%7B%20X_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%20%7D%20%5Cright%5D%20%20%3D%20%5Cpsi%20%5Cleft%5B%5Cfrac%7B1%7D%7B2%7D%28%5Cnu_%7Bk_i%7D%20%2B%20p%29%20%5Cright%5D%20%2B%20%5Clog%20%5Cleft%5BE%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%5D%20%5Cright%5D%20-%20%5Clog%5Cleft%28%5Cfrac%7B1%7D%7B2%7D%28v_%7Bk_i%7D%20%2B%20p%29%5Cright%29%2C%20%5Cquad%20%5Cforall%20i%0A "
+E \left [\log(U_i)| \boldsymbol { X_i}, \boldsymbol {Z_i } \right]  = \psi \left[\frac{1}{2}(\nu_{k_i} + p) \right] + \log \left[E [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i}] \right] - \log\left(\frac{1}{2}(v_{k_i} + p)\right), \quad \forall i
 ")
 
 ![\\psi(\\cdot )](https://latex.codecogs.com/png.latex?%5Cpsi%28%5Ccdot%20%29 "\psi(\cdot )") denotes the digamma function.
@@ -66,32 +66,30 @@ E \left [\log(U_i)| \boldsymbol { X_i}, \boldsymbol {Z_i } \right]  = \psi \left
 **M step**
 
 ![
-\\hat \\pi\_g = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\] }{n} = \\text{Ave}\_{i=1, \\dots, n}(E\[Z\_{ig}|\\boldsymbol{X\_i}\])
-](https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cpi_g%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%7D%7Bn%7D%20%3D%20%5Ctext%7BAve%7D_%7Bi%3D1%2C%20%5Cdots%2C%20n%7D%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%7BX_i%7D%5D%29%0A "
-\hat \pi_g = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}] }{n} = \text{Ave}_{i=1, \dots, n}(E[Z_{ig}|\boldsymbol{X_i}])
+\\hat \\pi\_g = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\] }{n} = \\text{Ave}\_{i=1, \\dots, n}(E\[Z\_{ig}|\\boldsymbol{X\_i}\]), \\quad \\forall g
+](https://latex.codecogs.com/png.latex?%0A%5Chat%20%5Cpi_g%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%7D%7Bn%7D%20%3D%20%5Ctext%7BAve%7D_%7Bi%3D1%2C%20%5Cdots%2C%20n%7D%28E%5BZ_%7Big%7D%7C%5Cboldsymbol%7BX_i%7D%5D%29%2C%20%5Cquad%20%5Cforall%20g%0A "
+\hat \pi_g = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}] }{n} = \text{Ave}_{i=1, \dots, n}(E[Z_{ig}|\boldsymbol{X_i}]), \quad \forall g
 ")
 
 ![
-\\hat {\\boldsymbol {\\mu\_g}} = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]  E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i}\\right\] \\boldsymbol {X\_i} } {\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]  E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i} \\right\] }
-](https://latex.codecogs.com/png.latex?%0A%5Chat%20%7B%5Cboldsymbol%20%7B%5Cmu_g%7D%7D%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%5Cright%5D%20%5Cboldsymbol%20%7BX_i%7D%20%7D%20%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20%7D%0A "
-\hat {\boldsymbol {\mu_g}} = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]  E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i}\right] \boldsymbol {X_i} } {\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]  E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i} \right] }
+\\hat {\\boldsymbol {\\mu\_g}} = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]  E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i}\\right\] \\boldsymbol {X\_i} } {\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]  E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i} \\right\] }, \\quad \\forall g
+](https://latex.codecogs.com/png.latex?%0A%5Chat%20%7B%5Cboldsymbol%20%7B%5Cmu_g%7D%7D%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%5Cright%5D%20%5Cboldsymbol%20%7BX_i%7D%20%7D%20%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20%7D%2C%20%5Cquad%20%5Cforall%20g%0A "
+\hat {\boldsymbol {\mu_g}} = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]  E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i}\right] \boldsymbol {X_i} } {\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]  E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i} \right] }, \quad \forall g
 ")
 
 ![
-\\hat {\\boldsymbol {\\Sigma\_g}} = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i} \\right\](\\boldsymbol {X\_i} - {\\boldsymbol {\\hat \\mu\_g}})(\\boldsymbol {X\_i} - {\\boldsymbol {\\hat \\mu\_g}})^T  }{\\sum\_{i=1}^n  E\[Z\_{ig}|\\boldsymbol {X\_i}\] }
-](https://latex.codecogs.com/png.latex?%0A%5Chat%20%7B%5Cboldsymbol%20%7B%5CSigma_g%7D%7D%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5DE%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%28%5Cboldsymbol%20%7BX_i%7D%20-%20%7B%5Cboldsymbol%20%7B%5Chat%20%5Cmu_g%7D%7D%29%28%5Cboldsymbol%20%7BX_i%7D%20-%20%7B%5Cboldsymbol%20%7B%5Chat%20%5Cmu_g%7D%7D%29%5ET%20%20%7D%7B%5Csum_%7Bi%3D1%7D%5En%20%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%7D%0A "
-\hat {\boldsymbol {\Sigma_g}} = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i} \right](\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})(\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})^T  }{\sum_{i=1}^n  E[Z_{ig}|\boldsymbol {X_i}] }
+\\hat {\\boldsymbol {\\Sigma\_g}} = \\frac{\\sum\_{i=1}^n E\[Z\_{ig}|\\boldsymbol {X\_i}\]E \\left \[U\_i| \\boldsymbol  {X\_i}, \\boldsymbol {Z\_i} \\right\](\\boldsymbol {X\_i} - {\\boldsymbol {\\hat \\mu\_g}})(\\boldsymbol {X\_i} - {\\boldsymbol {\\hat \\mu\_g}})^T  }{\\sum\_{i=1}^n  E\[Z\_{ig}|\\boldsymbol {X\_i}\] }, \\quad \\forall g
+](https://latex.codecogs.com/png.latex?%0A%5Chat%20%7B%5Cboldsymbol%20%7B%5CSigma_g%7D%7D%20%3D%20%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5En%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5DE%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%20%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%28%5Cboldsymbol%20%7BX_i%7D%20-%20%7B%5Cboldsymbol%20%7B%5Chat%20%5Cmu_g%7D%7D%29%28%5Cboldsymbol%20%7BX_i%7D%20-%20%7B%5Cboldsymbol%20%7B%5Chat%20%5Cmu_g%7D%7D%29%5ET%20%20%7D%7B%5Csum_%7Bi%3D1%7D%5En%20%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%7D%2C%20%5Cquad%20%5Cforall%20g%0A "
+\hat {\boldsymbol {\Sigma_g}} = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i} \right](\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})(\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})^T  }{\sum_{i=1}^n  E[Z_{ig}|\boldsymbol {X_i}] }, \quad \forall g
 ")
 
 The estimate for the ![\\nu\_g](https://latex.codecogs.com/png.latex?%5Cnu_g "\nu_g")'s must be found by maximizing the following univariate function for ![g = 1, \\dots, G](https://latex.codecogs.com/png.latex?g%20%3D%201%2C%20%5Cdots%2C%20G "g = 1, \dots, G").
 
 ![
-Q\_2(\\nu\_g) = \\sum\_{i=1}^n  E\[Z\_{ig}|\\boldsymbol {X\_i}\] \\left( \\frac{\\nu\_g}{2}\\log\\left(\\frac{\\nu\_g}{2} \\right) - \\log \\left ( \\Gamma (\\frac{\\nu\_g}{2}) \\right) + \\left(\\frac{\\nu\_g}{2} - 1 \\right) E \\left \[ \\log(U\_i) |  \\boldsymbol {X\_i}, \\boldsymbol {Z\_i} \\right\] - \\frac{\\nu\_g}{2}  E \\left \[U\_i| \\boldsymbol{X\_i}, \\boldsymbol {Z\_i} \\right\] \\right)
-](https://latex.codecogs.com/png.latex?%0AQ_2%28%5Cnu_g%29%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%5Cleft%28%20%5Cfrac%7B%5Cnu_g%7D%7B2%7D%5Clog%5Cleft%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20%5Cright%29%20-%20%5Clog%20%5Cleft%20%28%20%5CGamma%20%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%29%20%5Cright%29%20%2B%20%5Cleft%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20-%201%20%5Cright%29%20E%20%5Cleft%20%5B%20%5Clog%28U_i%29%20%7C%20%20%5Cboldsymbol%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20-%20%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20%5Cright%29%0A "
-Q_2(\nu_g) = \sum_{i=1}^n  E[Z_{ig}|\boldsymbol {X_i}] \left( \frac{\nu_g}{2}\log\left(\frac{\nu_g}{2} \right) - \log \left ( \Gamma (\frac{\nu_g}{2}) \right) + \left(\frac{\nu_g}{2} - 1 \right) E \left [ \log(U_i) |  \boldsymbol {X_i}, \boldsymbol {Z_i} \right] - \frac{\nu_g}{2}  E \left [U_i| \boldsymbol{X_i}, \boldsymbol {Z_i} \right] \right)
+Q\_2(\\nu\_g) = \\sum\_{i=1}^n  E\[Z\_{ig}|\\boldsymbol {X\_i}\] \\left( \\frac{\\nu\_g}{2}\\log\\left(\\frac{\\nu\_g}{2} \\right) - \\log \\left ( \\Gamma (\\frac{\\nu\_g}{2}) \\right) + \\left(\\frac{\\nu\_g}{2} - 1 \\right) E \\left \[ \\log(U\_i) |  \\boldsymbol {X\_i}, \\boldsymbol {Z\_i} \\right\] - \\frac{\\nu\_g}{2}  E \\left \[U\_i| \\boldsymbol{X\_i}, \\boldsymbol {Z\_i} \\right\] \\right), \\quad \\forall g
+](https://latex.codecogs.com/png.latex?%0AQ_2%28%5Cnu_g%29%20%3D%20%5Csum_%7Bi%3D1%7D%5En%20%20E%5BZ_%7Big%7D%7C%5Cboldsymbol%20%7BX_i%7D%5D%20%5Cleft%28%20%5Cfrac%7B%5Cnu_g%7D%7B2%7D%5Clog%5Cleft%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20%5Cright%29%20-%20%5Clog%20%5Cleft%20%28%20%5CGamma%20%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%29%20%5Cright%29%20%2B%20%5Cleft%28%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20-%201%20%5Cright%29%20E%20%5Cleft%20%5B%20%5Clog%28U_i%29%20%7C%20%20%5Cboldsymbol%20%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20-%20%5Cfrac%7B%5Cnu_g%7D%7B2%7D%20%20E%20%5Cleft%20%5BU_i%7C%20%5Cboldsymbol%7BX_i%7D%2C%20%5Cboldsymbol%20%7BZ_i%7D%20%5Cright%5D%20%5Cright%29%2C%20%5Cquad%20%5Cforall%20g%0A "
+Q_2(\nu_g) = \sum_{i=1}^n  E[Z_{ig}|\boldsymbol {X_i}] \left( \frac{\nu_g}{2}\log\left(\frac{\nu_g}{2} \right) - \log \left ( \Gamma (\frac{\nu_g}{2}) \right) + \left(\frac{\nu_g}{2} - 1 \right) E \left [ \log(U_i) |  \boldsymbol {X_i}, \boldsymbol {Z_i} \right] - \frac{\nu_g}{2}  E \left [U_i| \boldsymbol{X_i}, \boldsymbol {Z_i} \right] \right), \quad \forall g
 ")
-
-for ![g = 1, \\dots G](https://latex.codecogs.com/png.latex?g%20%3D%201%2C%20%5Cdots%20G "g = 1, \dots G").
 
 The implementation provided does this by performing a line search on a specified range.
 
