@@ -83,7 +83,7 @@ E \left [\log(U_i)| \boldsymbol { X_i}, \boldsymbol {Z_i } \right]  = \psi \left
 \hat {\boldsymbol {\Sigma_g}} = \frac{\sum_{i=1}^n E[Z_{ig}|\boldsymbol {X_i}]E \left [U_i| \boldsymbol  {X_i}, \boldsymbol {Z_i} \right](\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})(\boldsymbol {X_i} - {\boldsymbol {\hat \mu_g}})^T  }{\sum_{i=1}^n  E[Z_{ig}|\boldsymbol {X_i}] }, \quad \forall g
 ")
 
-The estimate for the ![\\nu\_g](https://latex.codecogs.com/png.latex?%5Cnu_g "\nu_g")'s must be found by maximizing the following univariate function for ![g = 1, \\dots, G](https://latex.codecogs.com/png.latex?g%20%3D%201%2C%20%5Cdots%2C%20G "g = 1, \dots, G").
+The estimate for the ![\\nu\_g](https://latex.codecogs.com/png.latex?%5Cnu_g "\nu_g")'s must be found by maximizing the following univariate function:
 
 ![
 Q\_2(\\nu\_g) = \\sum\_{i=1}^n  E\[Z\_{ig}|\\boldsymbol {X\_i}\] \\left( \\frac{\\nu\_g}{2}\\log\\left(\\frac{\\nu\_g}{2} \\right) - \\log \\left ( \\Gamma (\\frac{\\nu\_g}{2}) \\right) + \\left(\\frac{\\nu\_g}{2} - 1 \\right) E \\left \[ \\log(U\_i) |  \\boldsymbol {X\_i}, \\boldsymbol {Z\_i} \\right\] - \\frac{\\nu\_g}{2}  E \\left \[U\_i| \\boldsymbol{X\_i}, \\boldsymbol {Z\_i} \\right\] \\right), \\quad \\forall g
